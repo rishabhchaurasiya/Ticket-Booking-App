@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/screens/bottom_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ticket_booking_app/utils/app_styles.dart';
 
 void main() async {
   await ScreenUtil.ensureScreenSize();

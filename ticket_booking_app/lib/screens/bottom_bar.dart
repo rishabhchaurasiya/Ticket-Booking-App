@@ -3,6 +3,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:ticket_booking_app/screens/home_screen.dart';
+import 'package:ticket_booking_app/screens/profile_screen.dart';
+import 'package:ticket_booking_app/screens/search_screen.dart';
+import 'package:ticket_booking_app/screens/ticket_screen.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -16,9 +19,9 @@ class _BottomBarState extends State<BottomBar> {
 
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("Search"),
-    const Text("Tickets"),
-    const Text("Profile"),
+    const SearchScreen(),
+    const TicketScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -30,7 +33,6 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("My Tickets")),
       body: Center(
         child: _widgetOptions[_selectedIndex],
       ),
